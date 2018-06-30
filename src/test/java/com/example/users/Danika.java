@@ -15,6 +15,7 @@ public class Danika extends User {
     //---------------------------------------------------
 
 
+
     public String getName() {
         return name;
     }

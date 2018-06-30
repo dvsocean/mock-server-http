@@ -1,7 +1,11 @@
 package com.example.selectors;
 
+import com.codeborne.selenide.WebDriverRunner;
 import com.example.interfaces.ActionObject;
+import com.example.users.Danika;
 import com.example.users.User;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -13,7 +17,6 @@ public class DesktopHomePageSelectors implements ActionObject {
     public DesktopHomePageSelectors(User user){
         this.user = user;
     }
-
 
     @Override
     public ActionObject loginAs(User user) {

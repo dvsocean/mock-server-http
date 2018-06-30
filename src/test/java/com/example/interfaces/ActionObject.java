@@ -4,6 +4,6 @@ import com.example.users.User;
 
 public interface ActionObject {
 
-  ActionObject loginAs(User user);
+  ActionObject loginAs(final User user);
 
 }

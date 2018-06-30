@@ -6,19 +6,23 @@ import com.example.interfaces.SelectorObjects;
 import com.example.managers.Manager;
 import com.example.selectors.DesktopSelectors;
 import com.example.users.Danika;
+import com.example.users.User;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class ActionsForFrontPage {
 
     private String url = "http://www.mtsac.edu/";
 
-    private Danika danika = new Danika();
+    private User user = new User();
 
-    @DataProvider
+    @DataProvider(name = "source1")
     public Object[][] dataSourceOne() {
         return new Object[][] {
                 new Object[] { new Manager( new DesktopSelectors() ) }
@@ -27,14 +31,14 @@ public class ActionsForFrontPage {
 
     @BeforeClass
     public void setup(){
-        System.setProperty("webdriver.chrome.driver", "webdrivers/chromedriver");
-        WebDriverRunner.setWebDriver(new ChromeDriver());
+        System.setProperty("webdriver.gecko.driver", "webdrivers/geckodriver");
+        WebDriverRunner.setWebDriver(new FirefoxDriver());
         Selenide.open(url);
     }
 
-   @Test(dataProvider = "dataSourceOne")
-    public void checkScheduleForFall(Manager manager) throws InterruptedException {
-        manager.onTheHomePage().loginToSchoolPortalFor(danika);
+   @Test(dataProvider = "source1")
+    public void checkScheduleForFall(Manager manager) throws InterruptedException, IOException {
+        manager.onTheHomePage().loginToSchoolPortalFor(user);
     }
 
     @AfterClass
