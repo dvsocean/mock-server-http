@@ -1,7 +1,9 @@
 package com.example.interfaces;
 
+import com.example.users.Danika;
+
 public interface ActionObject {
 
-  ActionObject searchFor(String item);
+  ActionObject searchBy(Danika danika);
 
 }
