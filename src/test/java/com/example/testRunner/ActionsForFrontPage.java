@@ -2,7 +2,9 @@ package com.example.testRunner;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import com.example.interfaces.SelectorObjects;
 import com.example.managers.Manager;
+import com.example.selectors.DesktopSelectors;
 import com.example.users.Danika;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -19,7 +21,7 @@ public class ActionsForFrontPage {
     @DataProvider
     public Object[][] dataSourceOne() {
         return new Object[][] {
-                new Object[] { new Manager() }
+                new Object[] { new Manager( new DesktopSelectors() ) }
         };
     }
 
@@ -32,7 +34,7 @@ public class ActionsForFrontPage {
 
    @Test(dataProvider = "dataSourceOne")
     public void checkScheduleForFall(Manager manager) throws InterruptedException {
-        manager.onLogin().asStudent(danika);
+        manager.onTheHomePage().loginToSchoolPortalFor(danika);
     }
 
     @AfterClass

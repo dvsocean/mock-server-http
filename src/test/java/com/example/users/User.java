@@ -2,11 +2,21 @@ package com.example.users;
 
 public class User {
 
-    private Danika danika;
+    private String name = "Daniel";
+    private String lastName = "Ocean";
+    private String username = "docean";
+    private String password = "renegade9";
 
-    public Danika getDanika(){
-        return danika;
+    public String getUsername(){
+        return username;
     }
+
+    public String getPassword(){
+        return password;
+    }
+
+
+
 
 
 }

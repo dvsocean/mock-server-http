@@ -1,5 +1,6 @@
 package com.example.actions;
 
+import com.example.users.Danika;
 import com.example.users.User;
 
 import static com.codeborne.selenide.Selectors.byName;
@@ -11,13 +12,13 @@ public class Login {
     private User user;
 
     public Login(User user){
-        user = user;
+        this.user = user;
     }
 
     public void asStudent(User user){
         $(byText("Portal Login")).click();
-        $(byName("username")).setValue(user.getDanika().getMtSacUserName());
-        $(byName("password")).setValue(user.getDanika().getMtSacPassword()).pressEnter();
+        $(byName("username")).setValue(user.getUsername());
+        $(byName("password")).setValue(user.getPassword()).pressEnter();
     }
 
 }

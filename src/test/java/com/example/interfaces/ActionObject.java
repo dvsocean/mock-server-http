@@ -1,9 +1,9 @@
 package com.example.interfaces;
 
-import com.example.users.Danika;
+import com.example.users.User;
 
 public interface ActionObject {
 
-  ActionObject searchBy(Danika danika);
+  ActionObject loginAs(User user);
 
 }
