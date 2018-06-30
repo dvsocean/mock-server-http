@@ -1,19 +1,26 @@
 package com.example.managers;
 
-import com.example.actions.Search;
+import com.example.actions.Login;
 import com.example.pages.HomePage;
 
 public class Manager {
 
   private HomePage homePage;
-  private Search search;
+  private Login login;
+
+
 
   public Manager() {
     homePage = new HomePage();
-    search = new Search();
   }
+
+
 
   public HomePage onTheHomePage(){
     return homePage;
+  }
+
+  public Login onLogin(){
+    return login;
   }
 }

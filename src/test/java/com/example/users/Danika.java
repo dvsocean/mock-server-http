@@ -1,6 +1,6 @@
 package com.example.users;
 
-public class Danika {
+public class Danika extends User {
 
     private String name = "Daniel";
     private String lastName = "Ocean";
@@ -12,6 +12,7 @@ public class Danika {
     private String mtSacUserName = "docean";
     private String mtSacPassword = "renegade9";
 
+    //---------------------------------------------------
 
 
     public String getName() {
@@ -77,4 +78,6 @@ public class Danika {
     public void setMtSacPassword(String mtSacPassword) {
         this.mtSacPassword = mtSacPassword;
     }
+
+
 }

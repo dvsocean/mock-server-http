@@ -3,9 +3,7 @@ package com.example.testRunner;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import com.example.managers.Manager;
-import com.example.selectors.DesktopSelectors;
 import com.example.users.Danika;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -34,7 +32,7 @@ public class ActionsForFrontPage {
 
    @Test(dataProvider = "dataSourceOne")
     public void checkScheduleForFall(Manager manager) throws InterruptedException {
-        manager.onTheHomePage().loginToSchoolPortalFor(danika);
+        manager.onLogin().asStudent(danika);
     }
 
     @AfterClass
