@@ -1,11 +1,7 @@
 package com.example.selectors;
 
-import com.codeborne.selenide.WebDriverRunner;
 import com.example.interfaces.ActionObject;
-import com.example.users.Danika;
 import com.example.users.User;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;

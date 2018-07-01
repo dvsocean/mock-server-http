@@ -1,6 +1,5 @@
 package com.example.actions;
 
-import com.example.users.Danika;
 import com.example.users.User;
 
 import static com.codeborne.selenide.Selectors.byName;
