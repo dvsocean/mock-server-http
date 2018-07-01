@@ -5,12 +5,10 @@ import com.example.users.Danika;
 
 public class ObjectManager {
 
-    public Danika danika;
-    public ObjectHomePageTemplate objectHomePageTemplate;
+    private ObjectHomePageTemplate objectHomePageTemplate;
 
     public ObjectManager() {
         this.objectHomePageTemplate = new ObjectHomePageTemplate();
-        this.danika = new Danika();
     }
 
     public ObjectHomePageTemplate onTheHomePage(){
