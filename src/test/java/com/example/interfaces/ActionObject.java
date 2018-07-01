@@ -4,6 +4,8 @@ import com.example.users.User;
 
 public interface ActionObject {
 
-  ActionObject loginAs(final User user);
+  ActionObject loginAs(User user);
+
+  ActionObject performSearch(User user);
 
 }

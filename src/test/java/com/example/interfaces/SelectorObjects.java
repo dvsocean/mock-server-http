@@ -4,6 +4,6 @@ import com.example.users.User;
 
 public interface SelectorObjects {
 
-  ActionObject getSelectorsForHomePage(User user);
+  ActionObject getInterfaceForHomePage(User user);
 
 }
