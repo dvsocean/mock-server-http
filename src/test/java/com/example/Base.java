@@ -12,7 +12,7 @@ public class Base {
 
     private String url = "http://www.mtsac.edu/";
 
-    @DataProvider(name = "data1")
+    @DataProvider
     public Object[][] accessData(){
         return new Object[][]{
                 new Object[]{new ObjectManager()}

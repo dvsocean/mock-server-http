@@ -1,17 +1,16 @@
 package com.example.managers;
 
-import com.example.pages.ObjectHomePageTemplate;
-import com.example.users.Danika;
+import com.example.pages.HomePage;
 
 public class ObjectManager {
 
-    private ObjectHomePageTemplate objectHomePageTemplate;
+    private HomePage homePage;
 
     public ObjectManager() {
-        this.objectHomePageTemplate = new ObjectHomePageTemplate();
+        this.homePage = new HomePage();
     }
 
-    public ObjectHomePageTemplate onTheHomePage(){
-        return objectHomePageTemplate;
+    public HomePage onTheHomePage(){
+        return homePage;
     }
 }
