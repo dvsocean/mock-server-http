@@ -2,9 +2,9 @@ package com.example.users;
 
 public class User {
 
-    private String username = "docean";
-    private String password = "renegade9";
-    private String interest = "Computer science";
+    private String username = "";
+    private String password = "";
+    private String interest = "";
 
     public String getUsername() {
         return username;
